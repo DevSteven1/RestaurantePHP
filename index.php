@@ -11,7 +11,8 @@
 
 <body class="h-screen flex flex-col m-0 p-0">
 
-<?php require_once './includes/Header.php'; ?>
+<?php require_once './includes/Header.php';?>
+
     <section class="swiper mySwiper h-full w-full">
         <div class="swiper-wrapper">
             <?php
@@ -49,7 +50,9 @@
         <div class="swiper-pagination"></div>
     </section>
 
-    <footer class="h-32 bg-black w-full border rounded-t-lg"></footer>
+    <?php
+        include './includes/Footer.php';
+    ?>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
