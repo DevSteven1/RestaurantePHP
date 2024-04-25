@@ -17,6 +17,7 @@ require_once './includes/Header.php';
 require './assets/Conection.php';
 
 // Establecer la conexión a la base de datos
+// Crystian
 $cn = Conection("steven");
 
 ?>
