@@ -18,6 +18,7 @@ require './assets/Conection.php';
 
 // Establecer la conexión a la base de datos
 // Crystian
+//HOLA
 $cn = Conection("steven");
 
 ?>
