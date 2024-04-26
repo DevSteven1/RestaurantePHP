@@ -26,9 +26,7 @@ $cn = Conection("steven");
 <section class="swiper mySwiper h-full w-full">
     <div class="swiper-wrapper">
         <?php
-
         $estado = 0;
-
         if ($estado == 0) {
 
             include './includes/Card.php';
