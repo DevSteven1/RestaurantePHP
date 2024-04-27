@@ -11,62 +11,62 @@
 
 <body class="h-screen flex flex-col m-0 p-0">
 
-<?php
+    <?php
 
-require_once './includes/Header.php';
-require './assets/Conection.php';
+    require_once './includes/Header.php';
+    require './assets/Conection.php';
 
-// Establecer la conexión a la base de datos
-// Crystian
-//HOLA
-$cn = Conection("steven");
+    // Establecer la conexión a la base de datos
+    // Crystian
+    //HOLA
+    $cn = Conection("steven");
 
-?>
+    ?>
 
-<section class="swiper mySwiper h-full w-full">
-    <div class="swiper-wrapper">
-        <?php
-        $estado = 0;
-        if ($estado == 0) {
+    <section class="swiper mySwiper h-full w-full">
+        <div class="swiper-wrapper">
+            <?php
+            $estado = 0;
+            if ($estado == 0) {
 
-            include './includes/Card.php';
+                include './includes/Card.php';
 
-            $elementos = getAllData("platos", $cn);
-            $elementos_array = json_decode($elementos, true);
-            $grupos = array_chunk($elementos_array, 6);
+                $elementos = getAllData("platos", $cn);
+                $elementos_array = json_decode($elementos, true);
+                $grupos = array_chunk($elementos_array, 6);
 
-            foreach ($grupos as $grupo) {
-                echo '<div class="swiper-slide grid grid-cols-3 grid-rows-2 p-10 gap-10">';
-                foreach ($grupo as $elemento) {
-                    Card($elemento['id'], $elemento['nombre']);
+                foreach ($grupos as $grupo) {
+                    echo '<div class="swiper-slide grid grid-cols-3 grid-rows-2 p-10 gap-10">';
+                    foreach ($grupo as $elemento) {
+                        Card($elemento['id'], $elemento['nombre']);
+                    }
+                    echo '</div>';
                 }
-                echo '</div>';
             }
-        }
-        ?>
-    </div>
-    <div class="swiper-pagination"></div>
-</section>
+            ?>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
 
-<?php
-include './includes/Footer.php';
-?>
+    <?php
+    include './includes/Footer.php';
+    ?>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        pagination: {
-            el: ".swiper-pagination",
-        },
-    });
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
 
-    var bullets = document.querySelectorAll('.swiper-pagination-bullet');
-    bullets.forEach(function(bullet) {
-        bullet.classList.remove('bg-blue-500');
-        bullet.classList.add('bg-black');
-    });
-</script>
+        var bullets = document.querySelectorAll('.swiper-pagination-bullet');
+        bullets.forEach(function(bullet) {
+            bullet.classList.remove('bg-blue-500');
+            bullet.classList.add('bg-black');
+        });
+    </script>
 </body>
 
 </html>
