@@ -38,7 +38,7 @@
                             </svg>
                         </button>
                     </div>
-                    <button type="submit" data-modal-target="new-modal" data-modal-toggle="new-modal" class="col-span-2 text-center py-2.5 px-3 ms-1 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-600  focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-600">
+                    <button type="submit" data-modal-target="new-modal" data-modal-toggle="new-modal" class="truncate col-span-2 text-center py-2.5 px-3 ms-1 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-600  focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-600">
                         Nuevo
                     </button>
                 </div>
@@ -115,7 +115,12 @@
 
             </div>
         </div>
-
+        <?php
+        include("../assets/Conection.php");
+        $connection = Conection("restaurant");
+        $resultado = getAllData("tb_categorias", $connection);
+        //echo '<h2 class ="text-center">'. $resultados_array["1"].'</h2>';
+        ?>
 
 
         <!--Modal configuracion -->
@@ -206,17 +211,16 @@
                             </div>
                             <div class="col-span-2 sm:col-span-1">
                                 <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Categoria</label>
-                                <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                    <option selected="">Select category</option>
-                                    <option value="TV">TV/Monitors</option>
-                                    <option value="PC">PC</option>
-                                    <option value="GA">Gaming/Console</option>
-                                    <option value="PH">Phones</option>
+                                <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                    <option disabled selected hidden>Categoria</option>
+                                    <?php foreach ($resultado as $option) { ?>
+                                        <option value="<?php echo $option['ID'] ?>"><?php echo $option['NOMBRE'] ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                             <div class="col-span-2">
                                 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Imagen</label>
-                                <input name="imagen" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">
+                                <input required name="imagen" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">
 
                             </div>
                         </div>
@@ -229,12 +233,7 @@
                 </div>
             </div>
         </div>
-
-
-
-
     </main>
-
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
