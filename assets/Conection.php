@@ -18,22 +18,6 @@ function Conection($db)
     return $conn;
 }
 
-function getAllCategories($connection)
-{
-    $query = "SELECT * FROM tb_categorias";
-    $result = mysqli_query($connection, $query);
-    if (!$result) {
-        throw new Exception("Error al obtener los datos: " . mysqli_error($connection));
-    }
-
-    $data = array();
-
-    // Recorrer los resultados y almacenarlos en el arreglo
-    while ($row = $result->fetch_assoc()) {
-        $data[] = $row;
-    }
-    return json_encode($data);
-}
 
 function savePlatillo($name, $imagen, $precio, $categoria)
 {

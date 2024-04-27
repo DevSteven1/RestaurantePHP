@@ -11,9 +11,9 @@
 
     <?php
 
-    include("./assets/Conection.php");
+    include("../assets/Conection.php");
     $connection = Conection("restaurant");
-    echo getAllCategories($connection);
+    echo getAllData("tb_producto", $connection);
     ?>
 
 </body>
