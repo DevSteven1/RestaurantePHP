@@ -8,7 +8,6 @@ function Conection($db)
     $USERNAME = "root";
     $PASSWORD = "navaja09";
     $database = $db;
-
     $conn = mysqli_connect($SERVER_NAME, $USERNAME, $PASSWORD, $database);
 
     if (!$conn) {

@@ -22,8 +22,8 @@
     <main>
 
         <div class="p-4 sm:ml-64">
+            <h2 class="font-serif text-center col-span-12 mb-3 mt-3 text-3xl">Gestion de Platillos</h2>
             <div class="min-w-[200px] p-4  border border-gray-200 rounded-lg dark:bg-white-800 mt-28 dark:border-gray-300 shadow-xl">
-                <h2 class="font-mono text-center col-span-12 mb-3 text-lg">Gestion de Platillos</h2>
                 <div class="grid grid-cols-12 mb-3 mx-auto">
                     <div class="relative w-full col-span-10">
                         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -42,7 +42,7 @@
                         Nuevo
                     </button>
                 </div>
-                <div class="overflow-auto max-h-[500px]">
+                <div class="overflow-auto ">
                     <div class="grid grid-cols-12 mb-4">
                         <table class="table-auto col-span-12 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 overflow-y-scroll">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -178,6 +178,11 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class=" mt-44 sm:ml-60 md:mt-42 lg:pl-3 ">
+            <?php
+            include("../includes/FooterAdmin.php");
+            ?>
         </div>
 
 
