@@ -2,20 +2,7 @@
 
 use FTP\Connection;
 
-function Conection($db)
-{
-    $SERVER_NAME = "localhost";
-    $USERNAME = "root";
-    $PASSWORD = "navaja09";
-    $database = $db;
-    $conn = mysqli_connect($SERVER_NAME, $USERNAME, $PASSWORD, $database);
-
-    if (!$conn) {
-        die("Conexion Fallida: " . mysqli_connect_error());
-    }
-
-    return $conn;
-}
+include("./assets/ConnectionIgnore.php");
 
 
 function savePlatillo($name, $imagen, $precio, $categoria)
