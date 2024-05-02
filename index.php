@@ -12,7 +12,7 @@
 </head>
 
 <body class="h-screen m-0 p-0 bg-slate-100">
-
+<!-- NAV INICIO -->
     <div class="navbar text-orange-600">
         <div class="navbar-start">
             <div class="dropdown">
@@ -23,8 +23,8 @@
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                     <li><a>HOME</a></li>
-                    <li><a>PLATOS</a></li>
-                    <li><a>PROMOCIONES</a></li>
+                    <li><a href="#platos">PLATOS</a></li>
+                    <li><a href="#promociones">PROMOCIONES</a></li>
                     <li><a>CONTACTENOS</a></li>
                 </ul>
             </div>
@@ -33,8 +33,8 @@
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 text-xl">
                 <li><a>HOME</a></li>
-                <li><a>PLATOS</a></li>
-                <li><a>PROMOCIONES</a></li>
+                <li><a href="#platos">PLATOS</a></li>
+                <li><a href="#promociones">PROMOCIONES</a></li>
                 <li><a>CONTACTENOS</a></li>
             </ul>
         </div>
@@ -49,8 +49,8 @@
             </div>
         </div>
     </div>
-
-
+<!-- NAV FINAL -->
+<!-- HOME INICIO -->
     <div class="bg-slate-100 flex justify-center items-center">
         <div class="relative w-full h-full grid grid-cols-1 md:grid-cols-3 md:h-full">
             <div class="col-span-2 relative">
@@ -63,16 +63,17 @@
             </div>
         </div>
     </div>
-    
-    <div class="grid grid-cols-1 m-5 relative  text-orange-600">
+<!-- HOME FINAL -->
+<!-- PLATOS INICIO -->
+    <div class="grid grid-cols-1 m-10 relative  text-orange-600">
         <div class="text-center absolute top-0 left-0 w-full z-10 pt-9">
             <a href="#" class="text-4xl">PLATOS</a>
         </div>
         <div class="text-center  opacity-30">
-            <a href="#" class="text-6xl">PLATOS</a>
+            <a id="platos" href="#" class="text-6xl">PLATOS</a>
         </div>
     </div>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-3 justify-center items-center text-center m-5">
         <div class="flex justify-center">
             <div class="card w-full bg-base-100 shadow-xl md:w-96">
@@ -123,9 +124,52 @@
             </div>
         </div>
     </div>
+<!-- PLATOS FINAL -->
+<!-- PROMOCIONES INICIO -->
+    <div class="grid grid-cols-1 m-10 relative  text-orange-600">
+        <div class="text-center absolute top-0 left-0 w-full z-10 pt-9">
+            <a href="#" class="text-4xl">PROMOCIONES</a>
+        </div>
+        <div class="text-center  opacity-30">
+            <a id="promociones" href="#" class="text-6xl">PROMOCIONES</a>
+        </div>
+    </div>
 
+    <div class="grid grid-cols-1 md:grid-cols-2 justify-center items-center text-center m-5 gap-5">
+        <div class="card lg:card-side bg-base-100 shadow-xl">
+            <figure><img src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album" /></figure>
+            <div class="card-body">
+                <h2 class="card-title">New album is released!</h2>
+                <p>Click the button to listen on Spotiwhy app.</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Listen</button>
+                </div>
+            </div>
+        </div>
+        <div class="card lg:card-side bg-base-100 shadow-xl">
+            <figure><img src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album" /></figure>
+            <div class="card-body">
+                <h2 class="card-title">New album is released!</h2>
+                <p>Click the button to listen on Spotiwhy app.</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Listen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- PROMOCIONES FINAL -->
+<!-- CONTACTENOS INICIO -->
+<div class="grid grid-cols-1 m-10 relative  text-orange-600">
+        <div class="text-center absolute top-0 left-0 w-full z-10 pt-9">
+            <a href="#" class="text-4xl">CONTACTO</a>
+        </div>
+        <div class="text-center  opacity-30">
+            <a id="contactenos" href="#" class="text-6xl">CONTACTO</a>
+        </div>
+    </div>
 
-
+<!-- CONTACTENOS FINAL -->
+<!-- FOOTER INICIO -->
     <footer class="rounded-lg shadow bg-slate-100">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div class="sm:flex sm:items-center sm:justify-between">
@@ -152,7 +196,7 @@
             <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
         </div>
     </footer>
-
+<!-- FOOTER FINAL -->
     <script src="../public/js/TablesFilter.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
