@@ -13,7 +13,7 @@
 
 <body class="h-screen m-0 p-0 bg-slate-100">
 
-    <div class="navbar ">
+    <div class="navbar text-orange-600">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -51,15 +51,75 @@
     </div>
 
 
-    <div class="h-screen bg-slate-100 flex justify-center items-center">
+    <div class="bg-slate-100 flex justify-center items-center">
         <div class="relative w-full h-full grid grid-cols-1 md:grid-cols-3 md:h-full">
             <div class="col-span-2 relative">
-                <img src="/img/index-fondo.webp" class="absolute inset-0 w-full h-52 md:w-full md:h-full object-cover" />
+                <img src="/img/index-fondo.webp" class="absolute inset-0 w-full h-52 rounded-lg md:w-full md:h-full object-cover md:p-2 md:rounded-[50px]" />
             </div>
             <div class="flex flex-col justify-center items-center mt-16 md:mt-0">
-                <h1 class="text-center text-5xl">RESTAURANTE</h1>
-                <img src="/img/logo.png" alt="" width="300px">
-                <h2 class="text-center text-3xl mt-3">"Donde cada plato cuenta su propia historia"</h2>
+                <h1 class="text-center text-5xl mt-44 md:mt-24">RESTAURANTE</h1>
+                <img src="/img/logo.png" alt="" width="300px" class="my-5">
+                <h2 class="text-center text-3xl mb-24">"Donde cada plato cuenta su propia historia"</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-1 m-5 relative  text-orange-600">
+        <div class="text-center absolute top-0 left-0 w-full z-10 pt-9">
+            <a href="#" class="text-4xl">PLATOS</a>
+        </div>
+        <div class="text-center  opacity-30">
+            <a href="#" class="text-6xl">PLATOS</a>
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 justify-center items-center text-center m-5">
+        <div class="flex justify-center">
+            <div class="card w-full bg-base-100 shadow-xl md:w-96">
+                <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">
+                        Shoes!
+                        <div class="badge badge-secondary">NEW</div>
+                    </h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <div class="badge badge-outline">Fashion</div>
+                        <div class="badge badge-outline">Products</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="card w-full bg-base-100 shadow-xl md:w-96">
+                <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">
+                        Shoes!
+                        <div class="badge badge-secondary">NEW</div>
+                    </h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <div class="badge badge-outline">Fashion</div>
+                        <div class="badge badge-outline">Products</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div class="card w-full bg-base-100 shadow-xl md:w-96">
+                <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">
+                        Shoes!
+                        <div class="badge badge-secondary">NEW</div>
+                    </h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <div class="badge badge-outline">Fashion</div>
+                        <div class="badge badge-outline">Products</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
