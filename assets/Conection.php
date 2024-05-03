@@ -2,12 +2,12 @@
 
 use FTP\Connection;
 
-include("./assets/ConnectionIgnore.php");
+include("../assets/ConnectionIgnore.php");
 
 
 function savePlatillo($name, $imagen, $precio, $categoria)
 {
-    $con = Conection("restaurant");
+    $con = Conection();
     $query = "INSERT INTO tb_producto (`NOMBRE`, `IMAGEN`, `PRECIO`, `Tb_Categorias_ID`) VALUES ( '$name', '$imagen' , '$precio' , '$categoria')";
     $result = mysqli_query($con, $query);
     return $result;

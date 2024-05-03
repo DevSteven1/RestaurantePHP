@@ -22,8 +22,8 @@
     <main>
 
         <div class="p-4 sm:ml-64">
-            <h2 class="font-serif text-center col-span-12 mb-3 mt-3 text-3xl">Gestion de Platillos</h2>
-            <div class="min-w-[200px] p-4  border border-gray-200 rounded-lg dark:bg-white-800 mt-28 dark:border-gray-300 shadow-xl">
+            <h2 class="font-serif text-center col-span-12  mt-3 text-5xl">Gestion de Platos</h2>
+            <div class="min-w-[200px] p-4  border border-gray-200 rounded-lg dark:bg-white-800 mt-[3%] dark:border-gray-300 shadow-xl">
                 <div class="grid grid-cols-12 mb-3 mx-auto">
                     <div class="relative w-full col-span-10">
                         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -42,8 +42,8 @@
                         Nuevo
                     </button>
                 </div>
-                <div class="overflow-auto ">
-                    <div class="grid grid-cols-12 mb-4">
+                <div class="overflow-auto max-h-[400px] ">
+                    <div class="grid grid-cols-12 mb-4 ">
                         <table class="table-auto col-span-12 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 overflow-y-scroll">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
@@ -107,6 +107,81 @@
                                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                     </td>
                                 </tr>
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Apple MacBook Pro 17"
+                                    </th>
+
+                                    <td class="px-6 py-4">
+                                        Laptop
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        $2999
+                                    </td>
+                                    <td class="px-10 py-4">
+                                        <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Apple MacBook Pro 17"
+                                    </th>
+
+                                    <td class="px-6 py-4">
+                                        Laptop
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        $2999
+                                    </td>
+                                    <td class="px-10 py-4">
+                                        <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Apple MacBook Pro 17"
+                                    </th>
+
+                                    <td class="px-6 py-4">
+                                        Laptop
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        $2999
+                                    </td>
+                                    <td class="px-10 py-4">
+                                        <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Apple MacBook Pro 17"
+                                    </th>
+
+                                    <td class="px-6 py-4">
+                                        Laptop
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        $2999
+                                    </td>
+                                    <td class="px-10 py-4">
+                                        <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        Apple MacBook Pro 17"
+                                    </th>
+
+                                    <td class="px-6 py-4">
+                                        Laptop
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        $2999
+                                    </td>
+                                    <td class="px-10 py-4">
+                                        <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
+                                    </td>
+                                </tr>
 
                             </tbody>
                         </table>
@@ -117,7 +192,7 @@
         </div>
         <?php
         include("../assets/Conection.php");
-        $connection = Conection("restaurant");
+        $connection = Conection();
         $resultado = getAllData("tb_categorias", $connection);
         //echo '<h2 class ="text-center">'. $resultados_array["1"].'</h2>';
         ?>
@@ -179,6 +254,7 @@
                 </div>
             </div>
         </div>
+
         <div class=" mt-44 sm:ml-60 md:mt-42 lg:pl-3 ">
             <?php
             include("../includes/FooterAdmin.php");

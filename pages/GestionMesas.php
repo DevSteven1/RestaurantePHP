@@ -5,23 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion Mesas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 </head>
 
 <body>
-
-
-
     <?php
     include("../includes/HomeAdmins.php");
     ?>
 
-
     <div class="p-4 sm:ml-64">
-        <h2 class="font-serif text-center col-span-12 mb-3 mt-3 text-3xl">Gestion de Mesas</h2>
-        <div class="min-w-[200px] p-4  border border-gray-200 rounded-lg dark:bg-white-800 mt-[8%] dark:border-gray-300 shadow-xl">
+        <h2 class="font-serif text-center col-span-12  mt-3 text-5xl">Gestion de Mesas</h2>
+        <div class="min-w-[200px] p-4  border border-gray-200 rounded-lg dark:bg-white-800 mt-[3%] dark:border-gray-300 shadow-xl">
             <div class="grid grid-cols-12 mb-3 mx-auto">
                 <div class="relative w-full col-span-10">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -51,6 +48,9 @@
                                 <th scope="col" class="px-6 py-3">
                                     Nombre Mesa
                                 </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Mesero encargado
+                                </th>
                                 <th scope="col" class="px-3 py-3">
                                     Configuracion
                                 </th>
@@ -61,9 +61,14 @@
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     Apple MacBook Pro 17"
                                 </th>
-
                                 <td class="px-6 py-4">
-                                    Laptop
+                                    &nbsp;&nbsp; Laptop
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-[70%] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                        <option disabled selected hidden>Mesero</option>
+                                        <option value="">xx</option>
+                                    </select>
                                 </td>
                                 <td class="px-10 py-4">
                                     <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
@@ -77,17 +82,11 @@
                                 <td class="px-6 py-4">
                                     Laptop
                                 </td>
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-
-                                <td class="px-6 py-4">
-                                    Laptop
+                                <td class="px-6 py-4 ">
+                                    <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-[70%] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                        <option disabled selected hidden>Mesero</option>
+                                        <option value="">xx</option>
+                                    </select>
                                 </td>
                                 <td class="px-10 py-4">
                                     <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
@@ -101,17 +100,11 @@
                                 <td class="px-6 py-4">
                                     Laptop
                                 </td>
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-
-                                <td class="px-6 py-4">
-                                    Laptop
+                                <td class="px-6 py-4 ">
+                                    <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-[70%] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                        <option disabled selected hidden>Mesero</option>
+                                        <option value="">xx</option>
+                                    </select>
                                 </td>
                                 <td class="px-10 py-4">
                                     <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
@@ -125,17 +118,11 @@
                                 <td class="px-6 py-4">
                                     Laptop
                                 </td>
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-
-                                <td class="px-6 py-4">
-                                    Laptop
+                                <td class="px-6 py-4 ">
+                                    <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-[70%] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                        <option disabled selected hidden>Mesero</option>
+                                        <option value="">xx</option>
+                                    </select>
                                 </td>
                                 <td class="px-10 py-4">
                                     <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
@@ -149,17 +136,11 @@
                                 <td class="px-6 py-4">
                                     Laptop
                                 </td>
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-
-                                <td class="px-6 py-4">
-                                    Laptop
+                                <td class="px-6 py-4 ">
+                                    <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-[70%] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                        <option disabled selected hidden>Mesero</option>
+                                        <option value="">xx</option>
+                                    </select>
                                 </td>
                                 <td class="px-10 py-4">
                                     <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
@@ -172,6 +153,84 @@
 
                                 <td class="px-6 py-4">
                                     Laptop
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-[70%] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                        <option disabled selected hidden>Mesero</option>
+                                        <option value="">xx</option>
+                                    </select>
+                                </td>
+                                <td class="px-10 py-4">
+                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    Apple MacBook Pro 17"
+                                </th>
+
+                                <td class="px-6 py-4">
+                                    Laptop
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-[70%] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                        <option disabled selected hidden>Mesero</option>
+                                        <option value="">xx</option>
+                                    </select>
+                                </td>
+                                <td class="px-10 py-4">
+                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    Apple MacBook Pro 17"
+                                </th>
+
+                                <td class="px-6 py-4">
+                                    Laptop
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-[70%] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                        <option disabled selected hidden>Mesero</option>
+                                        <option value="">xx</option>
+                                    </select>
+                                </td>
+                                <td class="px-10 py-4">
+                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    Apple MacBook Pro 17"
+                                </th>
+
+                                <td class="px-6 py-4">
+                                    Laptop
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-[70%] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                        <option disabled selected hidden>Mesero</option>
+                                        <option value="">xx</option>
+                                    </select>
+                                </td>
+                                <td class="px-10 py-4">
+                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    Apple MacBook Pro 17"
+                                </th>
+
+                                <td class="px-6 py-4">
+                                    Laptop
+                                </td>
+                                <td class="px-6 py-4 ">
+                                    <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-[70%] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                                        <option disabled selected hidden>Mesero</option>
+                                        <option value="">xx</option>
+                                    </select>
                                 </td>
                                 <td class="px-10 py-4">
                                     <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
@@ -212,15 +271,14 @@
                     </button>
                 </div>
                 <!-- Modal body -->
-                <!-- Modal body -->
                 <form class="p-4 md:p-5">
                     <div class="grid gap-4 mb-4 grid-cols-2">
                         <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ID</label>
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">&nbsp;ID</label>
                             <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="ID Mesa" readonly>
                         </div>
                         <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">&nbsp;Nombre</label>
                             <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Mesa" required="">
                         </div>
                     </div>
@@ -259,7 +317,7 @@
                 <form class="p-4 md:p-5">
                     <div class="grid gap-4 mb-4 grid-cols-2">
                         <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">&nbsp;Nombre</label>
                             <input type="text" name="NombrePlato" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Nombre de la mesa" required="">
                         </div>
                     </div>

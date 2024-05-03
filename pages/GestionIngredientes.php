@@ -4,26 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion Trabajadores</title>
+    <title>Gestion Ingredientes</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-
+</head>
 </head>
 
 <body>
-
-
     <?php
     include("../includes/HomeAdmins.php");
     ?>
 
     <div class="p-4 sm:ml-64">
-        <h2 class="font-serif text-center col-span-12  mt-3 text-5xl">Gestion de Trabajadores</h2>
+        <h2 class="font-serif text-center col-span-12  mt-3 text-5xl">Gestion de Ingredientes</h2>
         <div class="min-w-[200px] p-4  border border-gray-200 rounded-lg dark:bg-white-800 mt-[3%] dark:border-gray-300 shadow-xl">
             <div class="grid grid-cols-12 mb-3 mx-auto">
-                <div class="relative w-full col-span-8">
+                <div class="relative w-full col-span-10">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                         <span class="material-symbols-outlined text-gray-500">
                             restaurant
@@ -36,9 +33,6 @@
                         </svg>
                     </button>
                 </div>
-                <button type="submit" data-modal-target="restablecimiento-modal" data-modal-toggle="restablecimiento-modal" class="truncate col-span-2 text-center py-2.5 px-3 ms-1 text-sm font-medium text-white bg-orange-700 rounded-lg border border-orange-700 hover:bg-orange-600  focus:outline-none focus:ring-blue-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-600">
-                    Restablecer Contraseña
-                </button>
                 <button type="submit" data-modal-target="new-modal" data-modal-toggle="new-modal" class="truncate col-span-2 text-center py-2.5 px-3 ms-1 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-600  focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-600">
                     Nuevo +
                 </button>
@@ -64,9 +58,23 @@
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     Apple MacBook Pro 17"
                                 </th>
+                                <td class="px-6 py-4">
+                                    &nbsp;&nbsp; Laptop
+                                </td>
+
+                                <td class="px-10 py-4">
+                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    Apple MacBook Pro 17"
+                                </th>
 
                                 <td class="px-6 py-4">
                                     Laptop
+                                </td>
+
                                 </td>
                                 <td class="px-10 py-4">
                                     <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
@@ -80,6 +88,7 @@
                                 <td class="px-6 py-4">
                                     Laptop
                                 </td>
+
                                 <td class="px-10 py-4">
                                     <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
                                 </td>
@@ -92,6 +101,7 @@
                                 <td class="px-6 py-4">
                                     Laptop
                                 </td>
+
                                 <td class="px-10 py-4">
                                     <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
                                 </td>
@@ -104,6 +114,7 @@
                                 <td class="px-6 py-4">
                                     Laptop
                                 </td>
+
                                 <td class="px-10 py-4">
                                     <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
                                 </td>
@@ -116,6 +127,7 @@
                                 <td class="px-6 py-4">
                                     Laptop
                                 </td>
+
                                 <td class="px-10 py-4">
                                     <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
                                 </td>
@@ -124,7 +136,6 @@
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     Apple MacBook Pro 17"
                                 </th>
-
                                 <td class="px-6 py-4">
                                     Laptop
                                 </td>
@@ -136,7 +147,6 @@
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     Apple MacBook Pro 17"
                                 </th>
-
                                 <td class="px-6 py-4">
                                     Laptop
                                 </td>
@@ -148,7 +158,6 @@
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     Apple MacBook Pro 17"
                                 </th>
-
                                 <td class="px-6 py-4">
                                     Laptop
                                 </td>
@@ -160,19 +169,6 @@
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                     Apple MacBook Pro 17"
                                 </th>
-
-                                <td class="px-6 py-4">
-                                    Laptop
-                                </td>
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-
                                 <td class="px-6 py-4">
                                     Laptop
                                 </td>
@@ -203,9 +199,9 @@
             <!-- Modal content -->
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                 <!-- Modal header -->
-                <div class="flex items-center justify-between p-2 md:p-4 border-b rounded-t dark:border-gray-600">
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                        Modificar Mesa
+                        Modificar Ingrediente
                     </h3>
                     <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
@@ -216,25 +212,14 @@
                 </div>
                 <!-- Modal body -->
                 <form class="p-4 md:p-5">
-                    <div class="grid gap-4 mb-4 grid-cols-4">
+                    <div class="grid gap-4 mb-4 grid-cols-2">
                         <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cedula</label>
-                            <input type="text" name="NombrePlato" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Numero de Cedula" required="">
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">&nbsp;ID</label>
+                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="ID Ingrediente" readonly>
                         </div>
                         <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
-                            <input type="text" name="NombrePlato" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Nombre del Trabajador" required="">
-                        </div>
-                        <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellido</label>
-                            <input type="text" name="NombrePlato" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Apellido del Trabajador" required="">
-                        </div>
-                        <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Rol</label>
-                            <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-[100%] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
-                                <option disabled selected hidden>Mesero</option>
-                                <option value="">xx</option>
-                            </select>
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">&nbsp;Nombre</label>
+                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrediente" required="">
                         </div>
                     </div>
                     <div class="grid grid-cols-4 gap-3">
@@ -250,15 +235,16 @@
         </div>
     </div>
 
-    <!--Modal Registro Nuevo Usuario -->
+
+    <!--Modal Registro Nuevo Ingrediente -->
     <div id="new-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-md max-h-full">
             <!-- Modal content -->
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                 <!-- Modal header -->
-                <div class="flex items-center justify-between p-4 md:p-4 border-b rounded-t dark:border-gray-600">
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                        Registrar Trabajador
+                        Registrar Ingrediente
                     </h3>
                     <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="new-modal">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
@@ -269,28 +255,13 @@
                 </div>
                 <!-- Modal body -->
                 <form class="p-4 md:p-5">
-                    <div class="grid gap-4 mb-4 grid-cols-4">
+                    <div class="grid gap-4 mb-4 grid-cols-2">
                         <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cedula</label>
-                            <input type="text" name="NombrePlato" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Numero de Cedula" required="">
-                        </div>
-                        <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
-                            <input type="text" name="NombrePlato" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Nombre del Trabajador" required="">
-                        </div>
-                        <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellido</label>
-                            <input type="text" name="NombrePlato" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Apellido del Trabajador" required="">
-                        </div>
-                        <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Rol</label>
-                            <select id="category" name="Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-[100%] p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
-                                <option disabled selected hidden>Mesero</option>
-                                <option value="">xx</option>
-                            </select>
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> &nbsp; Nombre</label>
+                            <input type="text" name="NombrePlato" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Nombre del ingrediente" required="">
                         </div>
                     </div>
-                    <button type="submit" class="col-span-2 end  text-white  items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <button type="submit" class="col-span-2 end  text-white  items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ml-1">
                         Agregar
                     </button>
                 </form>
@@ -298,47 +269,8 @@
         </div>
     </div>
 
-    <!--Modal Restablecimiento de contraseña -->
-    <div id="restablecimiento-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-md max-h-full">
-            <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <!-- Modal header -->
-                <div class="flex items-center justify-between p-4 md:p-4 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                        Restablecer Contraseña
-                    </h3>
-                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="restablecimiento-modal">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                        </svg>
-                        <span class="sr-only">Close modal</span>
-                    </button>
-                </div>
-                <!-- Modal body -->
-                <form class="p-4 md:p-5">
-                    <div class="grid gap-4 mb-4 grid-cols-12">
-                        <div class="col-span-7">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cedula</label>
-                            <input type="text" name="NombrePlato" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Numero de Cedula" required="">
-                        </div>
-                        <div class="col-span-5 mt-7">
-                            <button type="submit" class="truncate  text-center py-2.5 px-3 ms-1 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-600  focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-600">
-                                Buscar
-                            </button>
-                        </div>
-                    </div>
-                    <button type="submit" class="col-span-2 end  text-white  items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Agregar
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <script src="../public/js/TablesFilter.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
+<script src="../public/js/TablesFilter.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
 </html>
