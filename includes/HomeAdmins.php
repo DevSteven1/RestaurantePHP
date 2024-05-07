@@ -1,3 +1,6 @@
+<?php include("../includes/ButtonsMenu.php");
+?>
+
 <button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar" aria-controls="separator-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
     <span class="sr-only">Open sidebar</span>
     <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -9,55 +12,13 @@
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
         <h2 class="text-3xl text-center mb-2 text-white font-extrabold m-2">RESTAURANTE</h2>
         <ul class="space-y-2 font-medium">
-            <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z" />
-                    </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Administrador</span>
-                </a>
-            </li>
-            <li>
-                <a href="../pages/GestionPlatos.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <span class="material-symbols-outlined">
-                        restaurant_menu
-                    </span>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Gestion de Platos</span>
-                </a>
-            </li>
-            <li>
-                <a href="../pages/GestionIngredientes.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <span class="material-symbols-outlined">
-                        grocery
-                    </span>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Ingredientes</span>
-                </a>
-            </li>
-            <li>
-                <a href="../pages/GestionTrabajadores.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <span class="material-symbols-outlined">
-                        groups
-                    </span>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Gestion de Trabajadores</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="../pages/GestionMesas.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <span class="material-symbols-outlined">
-                        grid_on
-                    </span>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Gestion de Mesas</span>
-                </a>
-            </li>
-            <li>
-                <a href="../pages/GestionCategoriasPlatos.php" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <span class="material-symbols-outlined">
-                        category
-                    </span>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Gestion de Categorias</span>
-                </a>
-            </li>
+            <?php
+            $jsonButtons = file_get_contents('../data/Botones.json');
+            $Buttons = json_decode($jsonButtons, true);
+            for ($i = 0; $i < count($Buttons); $i++) {
+                ButtonsMenu($Buttons[$i]['href'], $Buttons[$i]['Nombre'], $Buttons[$i]['icon']);
+            }
+            ?>
         </ul>
         <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
             <li>

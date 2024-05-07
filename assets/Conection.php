@@ -7,15 +7,16 @@ include("../assets/ConnectionIgnore.php");
 
 function savePlatillo($name, $imagen, $precio, $categoria)
 {
-    $con = Conection();
+    $con = getConection();
     $query = "INSERT INTO tb_producto (`NOMBRE`, `IMAGEN`, `PRECIO`, `Tb_Categorias_ID`) VALUES ( '$name', '$imagen' , '$precio' , '$categoria')";
     $result = mysqli_query($con, $query);
     return $result;
 }
 
 
-function getAllData($tableName, $connection)
+function getAllData($tableName)
 {
+    $connection = getConection();
     $query = "SELECT * FROM $tableName";
     $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 
@@ -25,4 +26,22 @@ function getAllData($tableName, $connection)
     }
     mysqli_close($connection);
     return $data;
+}
+
+function getColumsName($tableName)
+{
+    $connection = getConection();
+    // Realizar una consulta para obtener los nombres de las columnas
+    $query = "SHOW COLUMNS FROM $tableName";
+    $result = mysqli_query($connection, $query);
+
+    // Obtener los nombres de las columnas
+    $columnNames = array();
+    while ($row = mysqli_fetch_assoc($result)) {
+        $columnNames[] = $row['Field'];
+    }
+    // Cerrar la conexión a la base de datos
+    mysqli_close($connection);
+
+    return $columnNames;
 }
