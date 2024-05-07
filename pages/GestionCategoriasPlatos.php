@@ -13,12 +13,16 @@
 
 <body>
     <?php
-    include("../includes/HomeAdmins.php");
-    ?>
+    include("../includes/HomeAdministradores.php");
+    include("../includes/GenericTables.php");
 
-    <div class="p-4 sm:ml-64">
+    $datos = getAllData("tb_categorias");
+    $colums = getColumsName("tb_categorias");
+    $data = getAllData("tb_categorias");
+    ?>
+    <div class="p-4 ml-20">
         <h2 class="font-serif text-center col-span-12  mt-3 text-5xl">Gestion de Categorias</h2>
-        <div class="min-w-[200px] p-4  border border-gray-200 rounded-lg dark:bg-white-800 mt-[3%] dark:border-gray-300 shadow-xl">
+        <div class="min-w-[200px]  p-4 border border-gray-200 rounded-lg dark:bg-white-800 mt-[3%] dark:border-gray-300 shadow-xl">
             <div class="grid grid-cols-12 mb-3 mx-auto">
                 <div class="relative w-full col-span-10">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -39,159 +43,11 @@
             </div>
             <div class="overflow-auto max-h-[400px]">
                 <div class="grid grid-cols-12 mb-4">
-                    <table class="table-auto col-span-12 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 overflow-y-scroll">
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                            <tr>
-                                <th scope="col" class="px-6 py-3">
-                                    ID Categorias
-                                </th>
-                                <th scope="col" class="px-6 py-3">
-                                    Nombre
-                                </th>
-                                <th scope="col" class="px-3 py-3">
-                                    Configuracion
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-                                <td class="px-6 py-4">
-                                    &nbsp;&nbsp; Laptop
-                                </td>
-
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-
-                                <td class="px-6 py-4">
-                                    Laptop
-                                </td>
-
-                                </td>
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-
-                                <td class="px-6 py-4">
-                                    Laptop
-                                </td>
-
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-
-                                <td class="px-6 py-4">
-                                    Laptop
-                                </td>
-
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-
-                                <td class="px-6 py-4">
-                                    Laptop
-                                </td>
-
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-
-                                <td class="px-6 py-4">
-                                    Laptop
-                                </td>
-
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-                                <td class="px-6 py-4">
-                                    Laptop
-                                </td>
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-                                <td class="px-6 py-4">
-                                    Laptop
-                                </td>
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-                                <td class="px-6 py-4">
-                                    Laptop
-                                </td>
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Apple MacBook Pro 17"
-                                </th>
-                                <td class="px-6 py-4">
-                                    Laptop
-                                </td>
-                                <td class="px-10 py-4">
-                                    <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
+                    <?php Tablas($colums, $data)  ?>
                 </div>
             </div>
-
         </div>
-
-
     </div>
-    <div class=" mt-44 sm:ml-60 md:mt-42 lg:pl-3 ">
-        <?php
-        include("../includes/FooterAdmin.php");
-        ?>
-    </div>
-
 
     <!--Modal configuracion -->
     <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -234,7 +90,6 @@
             </div>
         </div>
     </div>
-
 
     <!--Modal Registro Nuevo Ingrediente -->
     <div id="new-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
