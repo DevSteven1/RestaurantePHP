@@ -1,12 +1,6 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <?php
-include("../assets/Conection.php");
-
-$datos = getAllData("tb_categorias");
-
-$colums = getColumsName("tb_categorias");
-$data = getAllData("tb_categorias");
 function Tablas(array $columns, array $data)
 {
 ?>

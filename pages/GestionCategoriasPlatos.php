@@ -15,11 +15,21 @@
 <body>
     <?php
     include("../includes/HomeAdministradores.php");
+    include("../assets/Conection.php");
     include("../includes/GenericTables.php");
 
-    $datos = getAllData("tb_categorias");
-    $colums = getColumsName("tb_categorias");
-    $data = getAllData("tb_categorias");
+    //DATOS DE LA DB
+    //$datos = getAllData("tb_categorias");
+    //$colums = getColumsName("tb_categorias");
+    //$data = getAllData("tb_categorias");
+
+    $Json = file_get_contents('../data/JsonCategorias.json');
+    $Json = json_decode($Json, true);
+    $columnas = $Json['columnas'];
+    $registro = $Json['contenido'];
+
+
+
     ?>
     <div class="p-4 ml-20">
         <h2 class="font-serif text-center col-span-12 mt-3 mb-5 text-5xl">Gestion de Categorias(Tabla paginada)</h2>
@@ -44,7 +54,7 @@
             </div>
             <div class="overflow-auto max-h-[400px]">
                 <div class="grid grid-cols-12 mb-4">
-                    <?php Tablas($colums, $data)  ?>
+                    <?php Tablas($columnas, $registro)  ?>
                 </div>
             </div>
         </div>
@@ -118,6 +128,7 @@
                         <button type="submit" class="w-56 text-white items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             Agregar
                         </button>
+                    </div>
                 </form>
             </div>
         </div>

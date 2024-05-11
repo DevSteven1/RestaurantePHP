@@ -1,0 +1,208 @@
+{
+    "columnas": [
+        "ID",
+        "nombre"
+    ],
+    "contenido": [
+        {
+            "ID": 1,
+            "NOMBRE": "Categoría 1"
+        },
+        {
+            "ID": 2,
+            "NOMBRE": "Categoría 2"
+        },
+        {
+            "ID": 3,
+            "NOMBRE": "Categoría 3"
+        },
+        {
+            "ID": 4,
+            "NOMBRE": "Categoría 4"
+        },
+        {
+            "ID": 5,
+            "NOMBRE": "Categoría 5"
+        },
+        {
+            "ID": 6,
+            "NOMBRE": "Categoría 6"
+        },
+        {
+            "ID": 7,
+            "NOMBRE": "Categoría 7"
+        },
+        {
+            "ID": 8,
+            "NOMBRE": "Categoría 8"
+        },
+        {
+            "ID": 9,
+            "NOMBRE": "Categoría 9"
+        },
+        {
+            "ID": 10,
+            "NOMBRE": "Categoría 10"
+        },
+        {
+            "ID": 11,
+            "NOMBRE": "Categoría 11"
+        },
+        {
+            "ID": 12,
+            "NOMBRE": "Categoría 12"
+        },
+        {
+            "ID": 13,
+            "NOMBRE": "Categoría 13"
+        },
+        {
+            "ID": 14,
+            "NOMBRE": "Categoría 14"
+        },
+        {
+            "ID": 15,
+            "NOMBRE": "Categoría 15"
+        },
+        {
+            "ID": 16,
+            "NOMBRE": "Categoría 16"
+        },
+        {
+            "ID": 17,
+            "NOMBRE": "Categoría 17"
+        },
+        {
+            "ID": 18,
+            "NOMBRE": "Categoría 18"
+        },
+        {
+            "ID": 19,
+            "NOMBRE": "Categoría 19"
+        },
+        {
+            "ID": 20,
+            "NOMBRE": "Categoría 20"
+        },
+        {
+            "ID": 21,
+            "NOMBRE": "Categoría 21"
+        },
+        {
+            "ID": 22,
+            "NOMBRE": "Categoría 22"
+        },
+        {
+            "ID": 23,
+            "NOMBRE": "Categoría 23"
+        },
+        {
+            "ID": 24,
+            "NOMBRE": "Categoría 24"
+        },
+        {
+            "ID": 25,
+            "NOMBRE": "Categoría 25"
+        },
+        {
+            "ID": 26,
+            "NOMBRE": "Categoría 26"
+        },
+        {
+            "ID": 27,
+            "NOMBRE": "Categoría 27"
+        },
+        {
+            "ID": 28,
+            "NOMBRE": "Categoría 28"
+        },
+        {
+            "ID": 29,
+            "NOMBRE": "Categoría 29"
+        },
+        {
+            "ID": 30,
+            "NOMBRE": "Categoría 30"
+        },
+        {
+            "ID": 31,
+            "NOMBRE": "Categoría 31"
+        },
+        {
+            "ID": 32,
+            "NOMBRE": "Categoría 32"
+        },
+        {
+            "ID": 33,
+            "NOMBRE": "Categoría 33"
+        },
+        {
+            "ID": 34,
+            "NOMBRE": "Categoría 34"
+        },
+        {
+            "ID": 35,
+            "NOMBRE": "Categoría 35"
+        },
+        {
+            "ID": 36,
+            "NOMBRE": "Categoría 36"
+        },
+        {
+            "ID": 37,
+            "NOMBRE": "Categoría 37"
+        },
+        {
+            "ID": 38,
+            "NOMBRE": "Categoría 38"
+        },
+        {
+            "ID": 39,
+            "NOMBRE": "Categoría 39"
+        },
+        {
+            "ID": 40,
+            "NOMBRE": "Categoría 40"
+        },
+        {
+            "ID": 41,
+            "NOMBRE": "Categoría 41"
+        },
+        {
+            "ID": 42,
+            "NOMBRE": "Categoría 42"
+        },
+        {
+            "ID": 43,
+            "NOMBRE": "Categoría 43"
+        },
+        {
+            "ID": 44,
+            "NOMBRE": "Categoría 44"
+        },
+        {
+            "ID": 45,
+            "NOMBRE": "Categoría 45"
+        },
+        {
+            "ID": 46,
+            "NOMBRE": "Categoría 46"
+        },
+        {
+            "ID": 47,
+            "NOMBRE": "Categoría 47"
+        },
+        {
+            "ID": 48,
+            "NOMBRE": "Categoría 48"
+        },
+        {
+            "ID": 49,
+            "NOMBRE": "Categoría 49"
+        },
+        {
+            "ID": 50,
+            "NOMBRE": "Categoría 50"
+        }
+    ]
+}

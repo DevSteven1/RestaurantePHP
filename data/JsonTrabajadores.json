@@ -1,0 +1,281 @@
+{
+    "columnas": [
+        "ID",
+        "nombre",
+        "apellido",
+        "rol"
+    ],
+    "contenido": [
+        {
+            "ID": 1,
+            "nombre": "Juan",
+            "apellido": "González",
+            "rol": "Gerente"
+        },
+        {
+            "ID": 2,
+            "nombre": "María",
+            "apellido": "Martínez",
+            "rol": "Asistente de Ventas"
+        },
+        {
+            "ID": 3,
+            "nombre": "Pedro",
+            "apellido": "Díaz",
+            "rol": "Desarrollador"
+        },
+        {
+            "ID": 4,
+            "nombre": "Ana",
+            "apellido": "Sánchez",
+            "rol": "Diseñador Gráfico"
+        },
+        {
+            "ID": 5,
+            "nombre": "Luis",
+            "apellido": "Pérez",
+            "rol": "Analista de Datos"
+        },
+        {
+            "ID": 6,
+            "nombre": "Laura",
+            "apellido": "López",
+            "rol": "Asistente Administrativo"
+        },
+        {
+            "ID": 7,
+            "nombre": "Carlos",
+            "apellido": "Hernández",
+            "rol": "Técnico de Soporte"
+        },
+        {
+            "ID": 8,
+            "nombre": "Sofía",
+            "apellido": "Gómez",
+            "rol": "Contador"
+        },
+        {
+            "ID": 9,
+            "nombre": "Diego",
+            "apellido": "Rodríguez",
+            "rol": "Ingeniero Civil"
+        },
+        {
+            "ID": 10,
+            "nombre": "Elena",
+            "apellido": "Fernández",
+            "rol": "Recursos Humanos"
+        },
+        {
+            "ID": 11,
+            "nombre": "Javier",
+            "apellido": "Ruiz",
+            "rol": "Marketing Manager"
+        },
+        {
+            "ID": 12,
+            "nombre": "Carmen",
+            "apellido": "Alvarez",
+            "rol": "Supervisor de Producción"
+        },
+        {
+            "ID": 13,
+            "nombre": "Gabriel",
+            "apellido": "Romero",
+            "rol": "Analista Financiero"
+        },
+        {
+            "ID": 14,
+            "nombre": "Andrea",
+            "apellido": "Torres",
+            "rol": "Asistente de Marketing"
+        },
+        {
+            "ID": 15,
+            "nombre": "Mario",
+            "apellido": "Moreno",
+            "rol": "Desarrollador Web"
+        },
+        {
+            "ID": 16,
+            "nombre": "Natalia",
+            "apellido": "Dominguez",
+            "rol": "Diseñador UX/UI"
+        },
+        {
+            "ID": 17,
+            "nombre": "Roberto",
+            "apellido": "Cabrera",
+            "rol": "Gerente de Proyectos"
+        },
+        {
+            "ID": 18,
+            "nombre": "Valeria",
+            "apellido": "Ortega",
+            "rol": "Analista de Calidad"
+        },
+        {
+            "ID": 19,
+            "nombre": "Héctor",
+            "apellido": "Rojas",
+            "rol": "Asistente Legal"
+        },
+        {
+            "ID": 20,
+            "nombre": "Paula",
+            "apellido": "Gallardo",
+            "rol": "Analista de Marketing"
+        },
+        {
+            "ID": 21,
+            "nombre": "Adrián",
+            "apellido": "Soto",
+            "rol": "Consultor de Ventas"
+        },
+        {
+            "ID": 22,
+            "nombre": "Silvia",
+            "apellido": "Herrera",
+            "rol": "Ingeniero de Software"
+        },
+        {
+            "ID": 23,
+            "nombre": "Oscar",
+            "apellido": "Núñez",
+            "rol": "Diseñador Industrial"
+        },
+        {
+            "ID": 24,
+            "nombre": "Beatriz",
+            "apellido": "Medina",
+            "rol": "Asistente de Recursos Humanos"
+        },
+        {
+            "ID": 25,
+            "nombre": "Daniel",
+            "apellido": "Chávez",
+            "rol": "Especialista en SEO"
+        },
+        {
+            "ID": 26,
+            "nombre": "Lucía",
+            "apellido": "Guerrero",
+            "rol": "Técnico de Laboratorio"
+        },
+        {
+            "ID": 27,
+            "nombre": "Esteban",
+            "apellido": "Reyes",
+            "rol": "Administrador de Redes"
+        },
+        {
+            "ID": 28,
+            "nombre": "Marta",
+            "apellido": "Molina",
+            "rol": "Asistente de Compras"
+        },
+        {
+            "ID": 29,
+            "nombre": "Gonzalo",
+            "apellido": "Fuentes",
+            "rol": "Ingeniero Eléctrico"
+        },
+        {
+            "ID": 30,
+            "nombre": "Carolina",
+            "apellido": "Vargas",
+            "rol": "Gerente de Recursos Humanos"
+        },
+        {
+            "ID": 31,
+            "nombre": "Alberto",
+            "apellido": "Jiménez",
+            "rol": "Especialista en Marketing Digital"
+        },
+        {
+            "ID": 32,
+            "nombre": "Natalia",
+            "apellido": "Cortés",
+            "rol": "Analista de Sistemas"
+        },
+        {
+            "ID": 33,
+            "nombre": "Jorge",
+            "apellido": "Giménez",
+            "rol": "Ingeniero de Procesos"
+        },
+        {
+            "ID": 34,
+            "nombre": "Raquel",
+            "apellido": "Navarro",
+            "rol": "Especialista en Comunicación Corporativa"
+        },
+        {
+            "ID": 35,
+            "nombre": "Felipe",
+            "apellido": "Delgado",
+            "rol": "Diseñador de Interiores"
+        },
+        {
+            "ID": 36,
+            "nombre": "Alicia",
+            "apellido": "Castro",
+            "rol": "Gerente de Marketing"
+        },
+        {
+            "ID": 37,
+            "nombre": "Diego",
+            "apellido": "Pérez",
+            "rol": "Analista de Seguridad Informática"
+        },
+        {
+            "ID": 38,
+            "nombre": "Mónica",
+            "apellido": "Hernández",
+            "rol": "Especialista en Recursos Humanos"
+        },
+        {
+            "ID": 39,
+            "nombre": "Tomás",
+            "apellido": "Méndez",
+            "rol": "Ingeniero Mecánico"
+        },
+        {
+            "ID": 40,
+            "nombre": "Sara",
+            "apellido": "Aguilar",
+            "rol": "Asistente de Proyectos"
+        },
+        {
+            "ID": 41,
+            "nombre": "Diego",
+            "apellido": "Gutiérrez",
+            "rol": "Analista de Riesgos"
+        },
+        {
+            "ID": 42,
+            "nombre": "Laura",
+            "apellido": "Serrano",
+            "rol": "Diseñador de Moda"
+        },
+        {
+            "ID": 43,
+            "nombre": "Hugo",
+            "apellido": "Román",
+            "rol": "Especialista en Desarrollo Organizacional"
+        },
+        {
+            "ID": 44,
+            "nombre": "Cristina",
+            "apellido": "Suárez",
+            "rol": "Coordinador de Proyectos"
+        },
+        {
+            "ID": 45,
+            "nombre": "Marcos",
+            "apellido": "Ortiz",
+            "rol": "Analista de Negocios"
+        }
+    ]
+}
+    

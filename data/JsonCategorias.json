@@ -1,0 +1,32 @@
+{
+    "columnas": [
+        "ID",
+        "Nombre"
+    ],
+    "contenido": [
+        {
+            "ID": 1,
+            "Nombre": "Entrantes"
+        },
+        {
+            "ID": 2,
+            "Nombre": "Platos principales"
+        },
+        {
+            "ID": 3,
+            "Nombre": "Postres"
+        },
+        {
+            "ID": 4,
+            "Nombre": "Ensaladas"
+        },
+        {
+            "ID": 5,
+            "Nombre": "Aperitivos"
+        },
+        {
+            "ID": 6,
+            "Nombre": "Sopas y cremas"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "columnas": ["ID", "NOMBRE", "IMAGEN", "PRECIO", "Tb_Categorias_ID"],
+    "datos": [
+        {
+            "ID": 1,
+            "NOMBRE": "Hamburguesa clásica",
+            "IMAGEN": "hamburguesa_clasica.jpg",
+            "PRECIO": 8.99,
+            "Tb_Categorias_ID": 1
+        },
+        {
+            "ID": 2,
+            "NOMBRE": "Pizza Pepperoni",
+            "IMAGEN": "pizza_pepperoni.jpg",
+            "PRECIO": 10.50,
+            "Tb_Categorias_ID": 2
+        },
+        {
+            "ID": 3,
+            "NOMBRE": "Ensalada César",
+            "IMAGEN": "ensalada_cesar.jpg",
+            "PRECIO": 7.25,
+            "Tb_Categorias_ID": 3
+        },
+        {
+            "ID": 4,
+            "NOMBRE": "Pasta Alfredo",
+            "IMAGEN": "pasta_alfredo.jpg",
+            "PRECIO": 9.75,
+            "Tb_Categorias_ID": 4
+        },
+        {
+            "ID": 5,
+            "NOMBRE": "Sushi Variado",
+            "IMAGEN": "sushi_variado.jpg",
+            "PRECIO": 12.99,
+            "Tb_Categorias_ID": 5
+        }
+    ]
+}
