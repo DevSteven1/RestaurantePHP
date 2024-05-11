@@ -12,7 +12,7 @@
     {
         "name": "Ingredientes",
         "href": "../pages/GestionIngredientes.php",
-        "icon": "<span class=\"material-symbols-outlined\">grocery</span>"
+        "icon": "<span class=\"material-symbols-outlined \">grocery</span>"
     },
     {
         "name": "Gestion Trabajadores",

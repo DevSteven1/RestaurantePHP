@@ -10,28 +10,30 @@ $data = getAllData("tb_categorias");
 function Tablas(array $columns, array $data)
 {
 ?>
-    <table class="table-auto col-span-12 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 overflow-y-scroll">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <table class="w-full text-sm text-left col-span-12 text-gray-500">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
             <tr>
                 <?php foreach ($columns as $column) { ?>
-                    <th scope="col" class="px-6 py-3">
-                        <?php echo $column; ?>
-                    </th>
+                    <th scope="col" class="py-3 px-6"><?php echo $column ?></th>
                 <?php } ?>
-                <th scope="col" class="px-6 py-3">Funciones</th>
+                <th scope="col" class="py-3 px-6">Funciones</th>
             </tr>
         </thead>
         <tbody>
-
             <?php foreach ($data as $row) { ?>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <tr class="bg-white border-b">
                     <?php foreach ($row as $cell) { ?>
-                        <td class="px-6 py-4">
+                        <td class="py-4 px-6">
                             <?php echo $cell; ?>
                         </td>
                     <?php } ?>
-                    <td class="px-10 py-4">
-                        <a href="#" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline ">Edit</a>
+                    <td class="px-5 py-4">
+                        <span class="material-symbols-outlined cursor-pointer transition-transform hover:scale-125 hover:text-orange-400" data-modal-target="crud-modal" data-modal-toggle="crud-modal">
+                            edit
+                        </span>
+                        <span class="material-symbols-outlined cursor-pointer transition-transform hover:scale-125 hover:text-red-400">
+                            delete
+                        </span>
                     </td>
                 </tr>
             <?php } ?>
