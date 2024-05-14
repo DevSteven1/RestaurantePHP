@@ -1,36 +1,43 @@
 [
     {
         "name": "Administrador",
+        "id" : "admins",
         "href": "",
         "icon": "<span class=\"material-symbols-outlined\"> shield_person</span>"
     },
     {
         "name": "Gestion Platos",
+        "id" : "GesPlatos",
         "href": "../pages/GestionPlatos.php",
-        "icon": "<span class=\"material-symbols-outlined\">restaurant_menu</span>"
+        "icon": "<span class=\"material-symbols-outlined \">restaurant_menu</span>"
     },
     {
         "name": "Ingredientes",
+        "id" : "Ingredientes",
         "href": "../pages/GestionIngredientes.php",
         "icon": "<span class=\"material-symbols-outlined \">grocery</span>"
     },
     {
         "name": "Gestion Trabajadores",
+        "id" : "GesTrabajadores",
         "href": "../pages/GestionTrabajadores.php",
         "icon": "<span class=\"material-symbols-outlined\">groups</span>"
     },
     {
         "name": "Gestion Mesas",
+        "id" :"GesMesas",
         "href": "../pages/GestionMesas.php",
         "icon": "  <span class=\"material-symbols-outlined\">grid_on</span>"
     },
     {
         "name": "Gestion Categorias",
+        "id" : "GesCategorias",
         "href": "../pages/GestionCategoriasPlatos.php",
         "icon": "<span class=\"material-symbols-outlined\">category</span>"
     },
     {
         "name": "Reportes",
+        "id" : "GesReportes",
         "href": "",
         "icon": "<span class=\"material-symbols-outlined\">lab_profile</span>"
     }

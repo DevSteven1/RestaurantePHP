@@ -31,7 +31,7 @@
 
     <div class="p-4 ml-20">
         <h2 class="font-serif text-center col-span-12 mt-3 text-5xl mb-5">Gestion de Mesas</h2>
-        <div class="min-w-[200px] p-4  border border-gray-200 rounded-lg  mt-[3%]shadow-xl">
+        <div class="min-w-[200px] p-4  border border-gray-200 rounded-lg  mt-[3%] shadow-xl">
             <div class="grid grid-cols-12 mb-3 mx-auto">
                 <div class="relative w-full col-span-10">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -52,7 +52,7 @@
             </div>
             <div class="overflow-auto max-h-[400px]">
                 <div class="grid grid-cols-12 mb-4">
-                    <?php Tablas($columnas, $contenido) ?>
+                    <?php Tablas($columnas, $contenido , true) ?>
                 </div>
             </div>
 
@@ -143,5 +143,5 @@
 </body>
 <script src="../public/js/TablesFilter.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-
+<script src="../public/js/menujs.js"></script>
 </html>

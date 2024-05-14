@@ -53,7 +53,7 @@
                 </div>
                 <div class="overflow-auto max-h-[400px] ">
                     <div class="grid grid-cols-12 mb-4 ">
-                        <?php Tablas($columnas, $contenido)  ?>
+                        <?php Tablas($columnas, $contenido , false)  ?>
                     </div>
                 </div>
 
@@ -173,5 +173,5 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <script src="../public/js/TablesFilter.js"></script>
-
+<script src="../public/js/menujs.js"></script>
 </html>
