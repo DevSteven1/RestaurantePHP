@@ -9,6 +9,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="../public/js/alerts.js"></script>
+    <script src="../public/js/TableLoad.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 </head>
 
@@ -17,22 +21,11 @@
     include("../includes/HomeAdministradores.php");
     include("../assets/Conection.php");
     include("../includes/GenericTables.php");
-
-    //DATOS DE LA DB
-    //$datos = getAllData("tb_categorias");
-    //$colums = getColumsName("tb_categorias");
-    //$data = getAllData("tb_categorias");
-
-    $Json = file_get_contents('../data/JsonCategorias.json');
-    $Json = json_decode($Json, true);
-    $columnas = $Json['columnas'];
-    $registro = $Json['contenido'];
-
-
+    include("../assets/GestionPlatosLogica.php");
 
     ?>
     <div class="p-4 ml-20">
-        <h2 class="font-serif text-center col-span-12 mt-3 mb-5 text-5xl">Gestion de Categorias(Tabla paginada)</h2>
+        <h2 class="font-serif text-center col-span-12 mt-3 mb-5 text-5xl">Gestion de Categorias</h2>
         <div class="min-w-[200px]  p-4 border border-gray-200 rounded-lg dark:bg-white-800 mt-[3%] shadow-xl">
             <div class="grid grid-cols-12 mb-3 mx-auto">
                 <div class="relative w-full col-span-10">
@@ -53,20 +46,19 @@
                 </button>
             </div>
             <div class="overflow-auto max-h-[400px]">
-                <div class="grid grid-cols-12 mb-4">
-                    <?php Tablas($columnas, $registro, false)  ?>
+                <div id="contedorTable" class="grid grid-cols-12 mb-4">
+                    <?php Tablas($colums, $data, false , $table)  ?>
                 </div>
             </div>
         </div>
     </div>
-
     <!--Modal configuracion -->
     <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-md max-h-full">
             <!-- Modal content -->
             <div class="relative bg-white rounded-lg shadow animate__animated animate__fadeIn transform transition-all duration-1000 ease-linear">
                 <!-- Modal header -->
-                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
                     <h3 class="text-lg font-semibold text-dark">
                         Modificar Categoria
                     </h3>
@@ -78,19 +70,19 @@
                     </button>
                 </div>
                 <!-- Modal body -->
-                <form class="p-4 md:p-5">
+                <form action="GestionCategoriasPlatos.php" method="post" class="p-4 md:p-5">
                     <div class="grid gap-4 mb-4 grid-cols-2">
                         <div class="col-span-2">
                             <label for="name" class="block mb-2 text-sm font-medium text-black">&nbsp;Codigo</label>
-                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Codigo Ingrediente" readonly>
+                            <input type="text" name="ID_Categoria_Modificar" id="codigo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Codigo Ingrediente" readonly>
                         </div>
                         <div class="col-span-2">
                             <label for="name" class="block mb-2 text-sm font-medium text-black">&nbsp;Nombre</label>
-                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Nombre del Ingrediente" required>
+                            <input type="text" name="Nombre_Categoria_Modificar" id="nombre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Nombre del Ingrediente" required>
                         </div>
                     </div>
                     <div class="flex justify-center items-center h-full">
-                        <button type="submit" class="w-56 text-white items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <button type="submit" name="EditarCategorias" class="w-56 text-white items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             Modificar
                         </button>
                     </div>
@@ -98,8 +90,7 @@
             </div>
         </div>
     </div>
-
-    <!--Modal Registro Nuevo Ingrediente -->
+    <!--Modal Registro Nueva Categoria -->
     <div id="new-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-md max-h-full">
             <!-- Modal content -->
@@ -117,15 +108,19 @@
                     </button>
                 </div>
                 <!-- Modal body -->
-                <form class="p-4 md:p-5">
+                <form action="GestionCategoriasPlatos.php" method="post" class="p-4 md:p-5">
                     <div class="grid gap-4 mb-4 grid-cols-2">
                         <div class="col-span-2">
+                            <label for="name" class="block mb-2 text-sm font-medium text-black">&nbsp; ID</label>
+                            <input type="number" name="ID_Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Nombre de categoria" required="">
+                        </div>
+                        <div class="col-span-2">
                             <label for="name" class="block mb-2 text-sm font-medium text-black">&nbsp; Nombre</label>
-                            <input type="text" name="NombrePlato" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Nombre de categoria" required="">
+                            <input type="text" name="Nombre_Categoria" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Nombre de categoria" required="">
                         </div>
                     </div>
                     <div class="flex justify-center items-center h-full">
-                        <button type="submit" class="w-56 text-white items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <button type="submit" name="GuardarCategoria" class="w-56 text-white items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             Agregar
                         </button>
                     </div>
@@ -133,10 +128,32 @@
             </div>
         </div>
     </div>
-
 </body>
 <script src="../public/js/TablesFilter.js"></script>
+<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dismissible.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <script src="../public/js/menujs.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const editButtons = document.querySelectorAll('.edit-btn');
+
+        editButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const jsonData = this.getAttribute('data-json');
+                const data = JSON.parse(jsonData);
+                openModal(data);
+            });
+        });
+    });
+
+    function openModal(data) {
+        // Cargar los datos del registro en el modal
+        document.getElementById('codigo').value = data.ID; // Ajusta esto según los campos reales
+        document.getElementById('nombre').value = data.NOMBRE; // Ajusta esto según los campos reales
+
+        // Mostrar el modal
+        document.getElementById('crud-modal').classList.remove('hidden');
+    }
+</script>
 
 </html>

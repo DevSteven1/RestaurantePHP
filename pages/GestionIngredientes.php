@@ -51,7 +51,7 @@
             </div>
             <div class="overflow-auto max-h-[400px]">
                 <div class="grid grid-cols-12 mb-4">
-                    <?php Tablas($columnas, $contenido , false) ?>
+                    <?php Tablas($columnas, $contenido , false , "tb_ingredientes") ?>
                 </div>
             </div>
 

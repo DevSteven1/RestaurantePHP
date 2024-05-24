@@ -4,15 +4,55 @@ use FTP\Connection;
 
 include("../assets/ConnectionIgnore.php");
 
-
-function savePlatillo($name, $imagen, $precio, $categoria)
+function saveCategorias($id, $nombre)
 {
-    $con = getConection();
-    $query = "INSERT INTO tb_producto (`NOMBRE`, `IMAGEN`, `PRECIO`, `Tb_Categorias_ID`) VALUES ( '$name', '$imagen' , '$precio' , '$categoria')";
-    $result = mysqli_query($con, $query);
+    $connection = getConection();
+    //Importante los "?" ya que son los paramentros que se agregaran mas adelante
+    $sql = "CALL GuardadoCategorias(? , ?)";
+    //Se prepara la consulta (en este caso el procedimiento)
+    $stmt = $connection->prepare($sql);
+
+    //Se verifica si el procedimiento se preparo correctamente
+    if ($stmt === false) {
+        die("Error al preparar la consulta: " . $connection->error);
+    }
+
+    //Si el procedimiento cargo bien sigue la Vinculacion de los parametros
+    // "is" son los tipos de datos en orden que se usaran en este caso es INT y STRING
+    $stmt->bind_param("is", $id, $nombre);
+
+    // Ejecutar la consulta
+    $result = false;
+    try {
+        $stmt->execute();
+        $result = true;
+    } catch (Exception) {
+        $result = false;
+    }
     return $result;
 }
 
+function modifyCatgorias($id, $nombre)
+{
+    $connection = getConection();
+    $sql = "CALL EditCategoria(? , ?)";
+    $stm = $connection->prepare($sql);
+    if ($stm === false) {
+        die("Error al preparar la consulta: " . $connection->error);
+    }
+
+    $stm->bind_param("is", $id, $nombre);
+
+    $result = false;
+    try {
+        $stm->execute();
+        $result = true; 
+    } catch (Exception) {       
+        $result = false;
+    }
+
+    return $result;
+}
 
 function getAllData($tableName)
 {
